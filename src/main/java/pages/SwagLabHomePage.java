@@ -10,12 +10,17 @@ public class SwagLabHomePage extends BasePage {
     }
 
     ///Locators (FINDING PART)
-    @FindBy(css = "input[id='user-name']") private WebElement usernameLocator;
-    @FindBy(id="password") private WebElement passwordLocator;
+    @FindBy(xpath = "//input[@placeholder='Username']") private WebElement usernameLocator;
+
+    @FindBy(xpath = "//input[@placeholder='Password']") private WebElement passwordLocator;
+
     @FindBy(id="login-button") private WebElement loginButtonLocator;
 
 
     ///Methods (DOING PART)
+
+
+
     public void enterUserName(String username){
         usernameLocator.sendKeys(username);
     }
